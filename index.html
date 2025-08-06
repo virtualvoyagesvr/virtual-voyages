@@ -33,13 +33,49 @@
     nav {
       background-color: #2c2c2e;
       padding: 1rem;
-      text-align: center;
     }
-    nav a {
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-links a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
       font-weight: 500;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2c2c2e;
+        width: 100%;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
     }
     section {
       padding: 2rem 1rem;
@@ -91,6 +127,12 @@
       margin-bottom: 0.75rem;
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -99,13 +141,22 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#benefits">Why Us</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#how-it-works">How It Works</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#benefits">Why Us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <section id="about">
