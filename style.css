@@ -284,3 +284,15 @@ body {
 .center-text {
     text-align: center;
 }
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Keeps content vertically centered */
+    text-align: center;
+}
+
+.content-container {
+    max-width: 800px;
+    padding: 20px;
+}
