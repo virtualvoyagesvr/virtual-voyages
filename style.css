@@ -17,6 +17,7 @@ body {
   margin: 0;
   font-size: var(--font-size-base);
   line-height: 1.6;
+  text-align: center; /* Center all text by default */
 }
 
 nav.main-nav {
@@ -38,6 +39,11 @@ nav.main-nav a {
   font-weight: 500;
 }
 
+nav.main-nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
 header.hero {
   background-size: cover;
   background-position: center;
@@ -56,11 +62,15 @@ header.hero::before {
   z-index: 0;
 }
 
+/* FIXED: Make hero-text full width and centered */
 .hero-text {
   position: relative;
   z-index: 1;
-  max-width: 800px;
-  margin: auto;
+  max-width: none !important; /* override any limits */
+  width: 100%;
+  padding: 0 1rem; /* add horizontal padding */
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -74,11 +84,12 @@ header.hero::before {
   font-weight: 400;
 }
 
-/* Center and style section titles */
+/* SECTION HEADERS */
 .audience-card h3,
 section.intro h2,
 section.about h2,
-#contact h2 {
+#contact h2,
+.centered-content h2 {
   font-size: 2.5rem;
   font-weight: 900;
   text-align: center;
@@ -86,7 +97,7 @@ section.about h2,
   color: var(--primary-color);
 }
 
-/* Center images in audience cards and intro */
+/* IMAGES IN AUDIENCE CARDS AND INTRO */
 .audience-card img,
 section.intro img {
   display: block;
@@ -112,7 +123,7 @@ section.intro img {
   gap: 1rem;
 }
 
-/* Buttons styling in audience cards */
+/* Buttons in audience cards */
 .audience-card a.btn-primary {
   margin-top: 0;
   align-self: center;
@@ -236,66 +247,27 @@ section.about ul li {
     font-size: 1rem;
   }
 }
-.center-content {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
 
+/* Fix centered content styling */
+/* Remove flex centering from centered-content to avoid boxed header issue */
 .centered-content {
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
   padding: 2rem;
-}
-
-.centered-content h2 {
-  margin-bottom: 1rem;
-}
-
-.centered-content p,
-.centered-content ul {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.centered-content ul {
-  list-style-position: inside;
-  padding: 0;
-}
-
-body {
-    text-align: center;
-}
-
-/* Make sure ALL content sections center like index.html */
-.content {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.center-text {
-    text-align: center;
-}
-.centered-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh; /* Keeps content vertically centered */
-    text-align: center;
+  display: block; /* remove flex display */
+  align-items: unset; /* reset */
+  justify-content: unset;
+  min-height: unset;
 }
 
 .content-container {
-    max-width: 800px;
-    padding: 20px;
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
 }
+
 .text-centered {
   text-align: center;
 }
@@ -307,4 +279,25 @@ body {
 
 .text-centered li {
   margin-bottom: 0.5rem;
+}
+
+/* Additional centering classes if needed */
+.center-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Content container */
+.content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
