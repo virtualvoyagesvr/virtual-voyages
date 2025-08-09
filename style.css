@@ -241,3 +241,25 @@ section.about ul li {
   max-width: 900px;
   margin: 0 auto;
 }
+
+.centered-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.centered-content h2 {
+  margin-bottom: 1rem;
+}
+
+.centered-content p,
+.centered-content ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.centered-content ul {
+  list-style-position: inside;
+  padding: 0;
+}
