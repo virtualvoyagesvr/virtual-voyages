@@ -263,3 +263,8 @@ section.about ul li {
   list-style-position: inside;
   padding: 0;
 }
+
+body {
+    text-align: center;
+}
+
