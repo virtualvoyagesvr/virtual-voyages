@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Virtual Voyages VR — Hospitals & Rehab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="eldercare.html">For Elder Care</a>
+        <a href="rehab.html">Hospitals & Rehab</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" style="padding:2rem;text-align:center;">
+    <h1>Inspiring Recovery & Resilience Through VR</h1>
+    <p>Immersive experiences that reduce anxiety, motivate mobility, and support emotional wellbeing.</p>
+    <a class="btn-primary" href="#contact">Schedule a Demo</a>
+  </header>
+
+  <section class="hero-image">
+    <img src="images/rehab-hero.jpg" alt="Child in hospital using VR" class="responsive">
+  </section>
+
+  <section>
+    <h2>Why Hospitals & Rehab Use Virtual Voyages</h2>
+    <ul>
+      <li>Distraction from pain and procedure anxiety</li>
+      <li>Motivates active participation in physical therapy</li>
+      <li>Supports pediatric patients with gentle, fun experiences</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Programs</h2>
+    <h3>Pediatric Support</h3>
+    <p>Short VR sessions reduce stress and help children through procedures.</p>
+
+    <h3>Rehabilitation & Mobility</h3>
+    <p>Guided VR exercises designed to support therapy goals and keep patients engaged.</p>
+  </section>
+
+  <section class="testimonial">
+    <blockquote>“Our young patients smiled through treatment for the first time — a true game-changer.” — Child Life Specialist</blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>Schedule a Demo</h2>
+    <form action="https://formspree.io/f/xeozvqqo" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="organization" placeholder="Hospital/Center Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone" required>
+      <textarea name="message" placeholder="Tell us about your patients"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Virtual Voyages</p>
+  </footer>
+
+  <script>
+    function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
+  </script>
+</body>
+</html>
 
