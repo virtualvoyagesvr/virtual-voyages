@@ -296,3 +296,15 @@ body {
     max-width: 800px;
     padding: 20px;
 }
+.text-centered {
+  text-align: center;
+}
+
+.text-centered ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.text-centered li {
+  margin-bottom: 0.5rem;
+}
