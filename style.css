@@ -229,9 +229,11 @@ footer {
 
 /* Make sure images don't stretch weirdly */
 .audience-card img {
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 100%;
+  height: auto;          /* Let image height adjust automatically */
+  aspect-ratio: 4 / 3;   /* Keeps consistent shape, taller than 16:9 */
+  object-fit: contain;   /* Show entire image without cropping */
+  border-radius: 10px 10px 0 0;
   margin-bottom: 15px;
 }
 .services {
