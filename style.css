@@ -114,6 +114,13 @@ a {
   max-width: 800px;
   margin: auto;
 }
+/* Make hero header and paragraph text white with subtle shadow for clarity */
+.hero-text h1,
+.hero-text p {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -123,26 +130,12 @@ a {
   margin-bottom: 30px;
 }
 
-/* Hero Section Text */
-.hero-text h1,
-.hero-text p {
-  color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
-}
-
 /* Buttons container in hero */
 .buttons-container {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-/* Desktop (default) buttons style */
-.buttons-container .btn-primary,
-.buttons-container .btn-secondary {
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
 /* Sections */
@@ -293,158 +286,17 @@ footer {
     display: block;
   }
 
-  /* Buttons container */
+  /* Stack buttons and add spacing */
   .buttons-container {
-    flex-direction: row;       /* Keep buttons side-by-side */
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
   }
   .buttons-container .btn-primary,
   .buttons-container .btn-secondary {
-    width: auto;               /* Fit button width to content */
-    margin-bottom: 0;          /* No extra vertical margin */
-    padding-left: 24px;        /* Keep horizontal padding */
+    margin-bottom: 15px;
+    width: auto;          /* Let buttons size to content */
+    padding-left: 24px;
     padding-right: 24px;
     text-align: center;
-    display: inline-block;
-  }
-}
-
-/* On very small screens, stack buttons vertically */
-@media (max-width: 480px) {
-  .buttons-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .buttons-container .btn-primary,
-  .buttons-container .btn-secondary {
-    margin-bottom: 15px;       /* Add spacing between stacked buttons */
-  }
-}
-/* Impact Stats Section */
-.impact-stats {
-  background-color: #e8f4f8;
-  padding: 40px 5%;
-  border-radius: 12px;
-  margin: 40px 0;
-  text-align: center;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.stat strong {
-  font-size: 2.5rem;
-  color: #1a73e8;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.stat p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.small-note {
-  margin-top: 15px;
-  font-size: 0.8rem;
-  color: #555;
-}
-
-/* Safety & Ease Section */
-.safety-ease {
-  padding: 40px 5%;
-  margin-bottom: 40px;
-}
-.safety-ease ul {
-  list-style: disc inside;
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* FAQ Section */
-.faq {
-  background-color: #f9f9f9;
-  padding: 40px 5%;
-  border-radius: 12px;
-  max-width: 800px;
-  margin: 40px auto;
-}
-.faq details {
-  margin-bottom: 15px;
-  padding: 15px 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  background: white;
-}
-.faq summary {
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 1.1rem;
-}
-
-/* Testimonials tweaks */
-.testimonials blockquote {
-  background: #f4f8fb;
-  border-left: 5px solid #1a73e8;
-  margin: 20px auto;
-  padding: 20px;
-  font-style: italic;
-  max-width: 700px;
-}
-.testimonials cite {
-  display: block;
-  margin-top: 10px;
-  color: #555;
-  font-weight: 700;
-}
-
-/* Buttons container for hero */
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* Reuse btn-primary and btn-secondary from existing CSS */
-
-/* Responsive */
-@media (max-width: 768px) {
-  .impact-stats, .safety-ease, .faq {
-    padding: 30px 4%;
-  }
-  .stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 5%;
-    width: 200px;
-    flex-direction: column;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: none;
-    z-index: 1000;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-toggle {
-    display: block;
   }
 }
