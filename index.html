@@ -10,10 +10,18 @@
 
 <!-- Navigation -->
 <nav class="main-nav">
-  <a href="index.html" class="logo">Virtual Voyages VR</a>
-  <a href="eldercare.html">Elder Care</a>
-  <a href="rehab.html">Hospitals & Rehab</a>
-  <a href="#contact" class="btn-primary">Contact Us</a>
+  <div class="logo">Virtual Voyages VR</div>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    &#9776;
+  </button>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="eldercare.html">Elder Care</a>
+    <a href="rehab.html">Hospitals & Rehab</a>
+    <a href="#contact" class="btn-primary">Contact Us</a>
+  </div>
 </nav>
 
 <!-- Hero Section -->
@@ -21,8 +29,10 @@
   <div class="hero-text">
     <h1>Revolutionize Care with Immersive Virtual Reality</h1>
     <p>Engage. Inspire. Heal. We deliver world-class VR experiences proven to boost mood, promote recovery, and spark meaningful connections.</p>
-    <a href="#contact" class="btn-primary">Book a Free Consultation</a>
-    <a href="brochure.pdf" class="btn-secondary">Download Program Brochure</a>
+    <div class="buttons-container">
+      <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+      <a href="brochure.pdf" class="btn-secondary">Download Program Brochure</a>
+    </div>
   </div>
 </header>
 
@@ -77,55 +87,4 @@
 <section class="how-it-works">
   <h2>How It Works</h2>
   <div class="steps">
-    <div class="step">
-      <h3>1. We Arrive</h3>
-      <p>We bring sanitized VR headsets and everything needed for the session.</p>
-    </div>
-    <div class="step">
-      <h3>2. We Guide</h3>
-      <p>Our trained facilitators lead residents and patients through tailored experiences.</p>
-    </div>
-    <div class="step">
-      <h3>3. You See the Results</h3>
-      <p>Watch mood, motivation, and engagement soar.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <h2>Frequently Asked Questions</h2>
-  <details>
-    <summary>Is VR safe for seniors and patients with limited mobility?</summary>
-    <p>Yes. All experiences are seated, slow-paced, and designed with safety as the top priority.</p>
-  </details>
-  <details>
-    <summary>Do we need any technical setup?</summary>
-    <p>No. We bring, set up, and manage everything for you.</p>
-  </details>
-  <details>
-    <summary>How long are the sessions?</summary>
-    <p>Typically 30 minutes per person with 15 minutes set up between each individual session to sanitize and ready the equipment for the next individual.</p>
-  </details>
-</section>
-
-<!-- Contact Form -->
-<section id="contact">
-  <h2>Ready to Elevate Your Care Experience?</h2>
-  <p>Fill out the form and we’ll respond within 24 hours.</p>
-  <form action="https://formspree.io/f/xeozvqqo" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="tel" name="phone" placeholder="Your Phone" required />
-    <textarea name="message" placeholder="Tell us how we can help" rows="4"></textarea>
-    <button type="submit" class="btn-primary">Get in Touch</button>
-  </form>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>© 2025 Virtual Voyages VR | Bringing the World to Your Community</p>
-</footer>
-
-</body>
-</html>
+    <div c
