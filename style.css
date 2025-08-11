@@ -277,7 +277,7 @@ footer {
 }
 .card img {
   width: 100%;
-  height: 280px; /* Increased from something like 200px */
+  height: 320px; /* Increased from something like 200px */
   object-fit: cover;
   object-position: top; /* Ensures faces stay in view */
   border-top-left-radius: 10px;
