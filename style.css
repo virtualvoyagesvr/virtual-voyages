@@ -291,3 +291,14 @@ footer {
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  /* Remove full width so buttons fit content */
+  .buttons-container .btn-primary,
+  .buttons-container .btn-secondary {
+    width: auto;           /* Let buttons size to content */
+    margin-bottom: 15px;   /* Keep vertical spacing */
+    padding-left: 24px;    /* Keep horizontal padding */
+    padding-right: 24px;
+    text-align: center;
+  }
+}
