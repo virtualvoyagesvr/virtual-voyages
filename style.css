@@ -61,14 +61,33 @@ a {
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #eee;
+  position: relative; /* For absolute menu on mobile */
 }
-.main-nav a {
-  margin: 0 10px;
+
+.main-nav .logo {
+  font-size: 1.4rem;
   color: #1a4d6d;
   font-weight: bold;
 }
-.main-nav .logo {
-  font-size: 1.4rem;
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #1a4d6d;
+  font-weight: bold;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #1a4d6d;
+  cursor: pointer;
 }
 
 /* Hero Section */
@@ -104,6 +123,14 @@ a {
   margin-bottom: 30px;
 }
 
+/* Buttons container in hero */
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* Sections */
 section {
   padding: 50px 5%;
@@ -125,9 +152,34 @@ section {
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes button to bottom */
 }
+
 .audience-card h3 {
   margin: 15px 0;
+}
+
+.audience-card p {
+  margin-bottom: 20px; /* space between paragraph and button */
+}
+
+/* Audience card images */
+.audience-card img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  object-position: top;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .audience-card img {
+    max-height: 380px;
+  }
 }
 
 /* Testimonials */
@@ -198,106 +250,44 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive */
+/* Responsive styles */
 @media (max-width: 768px) {
+  /* Hero text resize */
   .hero-text h1 {
     font-size: 2rem;
   }
-}
-/* Make both audience cards equal height and space content nicely */
-.audience-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
 
-.audience-card {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /* Hamburger nav */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* pushes button to bottom */
-}
-
-.audience-card p {
-  margin-bottom: 20px; /* space between paragraph and button */
-}
-
-/* Make sure images don't stretch weirdly */
-.audience-card img {
-  width: 100%;
-  height: auto;          /* Let the height adjust naturally */
-  max-height: 320px;     /* Limit max height to avoid giant images */
-  object-fit: contain;   /* Show the entire image without cropping */
-  object-position: top;  /* Keep faces visible near the top */
-  border-radius: 10px 10px 0 0;
-  margin-bottom: 15px;
-}
-
-/* Optional: slightly taller aspect ratio for larger screens */
-@media (min-width: 768px) {
-  .audience-card img {
-    max-height: 380px;
+  /* Stack buttons and add spacing */
+  .buttons-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .buttons-container .btn-primary,
+  .buttons-container .btn-secondary {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
   }
 }
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.service {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.service h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.service p {
-  flex-grow: 1; /* pushes the button down to keep boxes even */
-  margin-bottom: 20px; /* space between text and button */
-}
-
-.service a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.service a:hover {
-  background-color: #0056b3;
-}
-.card img {
-  width: 100%;
-  height: auto; /* Let it size naturally */
-  aspect-ratio: 16 / 9; /* Keeps a consistent shape */
-  object-fit: cover;
-  object-position: top;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-@media (min-width: 768px) {
-  .card img {
-    aspect-ratio: 4 / 3; /* Slightly taller for desktop */
-  }
-}
-
