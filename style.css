@@ -131,6 +131,13 @@ a {
   flex-wrap: wrap;
 }
 
+/* Desktop (default) buttons style */
+.buttons-container .btn-primary,
+.buttons-container .btn-secondary {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 /* Sections */
 section {
   padding: 50px 5%;
@@ -279,26 +286,32 @@ footer {
     display: block;
   }
 
-  /* Stack buttons and add spacing */
+  /* Buttons container */
   .buttons-container {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;       /* Keep buttons side-by-side */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .buttons-container .btn-primary,
   .buttons-container .btn-secondary {
-    margin-bottom: 15px;
-    width: 100%;
-    text-align: center;
-  }
-}
-@media (max-width: 768px) {
-  /* Remove full width so buttons fit content */
-  .buttons-container .btn-primary,
-  .buttons-container .btn-secondary {
-    width: auto;           /* Let buttons size to content */
-    margin-bottom: 15px;   /* Keep vertical spacing */
-    padding-left: 24px;    /* Keep horizontal padding */
+    width: auto;               /* Fit button width to content */
+    margin-bottom: 0;          /* No extra vertical margin */
+    padding-left: 24px;        /* Keep horizontal padding */
     padding-right: 24px;
     text-align: center;
+    display: inline-block;
+  }
+}
+
+/* On very small screens, stack buttons vertically */
+@media (max-width: 480px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buttons-container .btn-primary,
+  .buttons-container .btn-secondary {
+    margin-bottom: 15px;       /* Add spacing between stacked buttons */
   }
 }
