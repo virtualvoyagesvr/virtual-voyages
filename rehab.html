@@ -8,17 +8,25 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="eldercare.html">Elder Care</a>
-    <a href="rehab.html" aria-current="page">Hospitals & Rehab</a>
+    <a href="index.html" class="logo">Virtual Voyages VR</a>
+    <div class="nav-links">
+      <a href="eldercare.html">Elder Care</a>
+      <a href="rehab.html" aria-current="page">Hospitals & Rehab</a>
+      <a href="#contact" class="btn-primary">Contact Us</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero" style="background-image: url('images/boy-hospital.jpg');">
     <div class="hero-text">
-      <h1>Inspiring Recovery and Resilience Through Virtual Reality</h1>
-      <p>Immersive VR therapy experiences that motivate patients, reduce anxiety, and promote engagement during recovery.</p>
-      <a href="#contact" class="btn-primary">Schedule a Demo</a>
+      <h1 style="color: white;">Inspiring Recovery and Resilience Through Virtual Reality</h1>
+      <p style="color: white;">Immersive VR therapy experiences that motivate patients, reduce anxiety, and promote engagement during recovery.</p>
+      <div class="buttons-container">
+        <a href="#contact" class="btn-primary">Schedule a Demo</a>
+      </div>
     </div>
   </header>
 
@@ -38,38 +46,15 @@
       <section>
         <h2>For Pediatric Patients</h2>
         <p>
-          Explore space, swim with dolphins, or visit magical worlds — helping reduce stress before and after procedures through fun, immersive experiences.
+          Our VR programs for pediatric patients are carefully designed to create engaging, age-appropriate experiences that reduce stress and anxiety associated with hospital stays and medical procedures. By immersing children in calming and fun environments—such as exploring outer space, swimming with dolphins, or visiting interactive story worlds—we help divert their attention from discomfort and fear. These experiences support emotional regulation, improve cooperation during treatments, and encourage positive coping strategies. All sessions are facilitated by trained specialists who ensure safety and monitor patient responses in real time.
         </p>
       </section>
 
       <section>
         <h2>For Rehabilitation Patients</h2>
         <p>
-          Engaging VR exercises designed to improve range of motion, coordination, and cognitive function — all tailored to each patient’s therapy goals.
+          Virtual Voyages VR offers tailored rehabilitation programs aimed at enhancing physical, cognitive, and emotional recovery. Our interactive VR exercises promote improved range of motion, balance, and coordination, while cognitive tasks support memory, attention, and problem-solving skills. The immersive nature of VR motivates patients to actively participate in their therapy, increasing adherence and engagement. Programs are personalized based on each patient’s therapy goals and limitations, with built-in safety measures and facilitator guidance to ensure optimal outcomes and prevent fatigue or injury.
         </p>
-      </section>
-
-      <!-- New Real-time Impact Data Section -->
-      <section class="impact-stats">
-        <h2>Proven Benefits for Hospitals & Rehab</h2>
-        <div class="stats-grid">
-          <div class="stat">
-            <strong>85%</strong>
-            <p>of patients report reduced pain perception during VR sessions</p>
-          </div>
-          <div class="stat">
-            <strong>78%</strong>
-            <p>increase in patient motivation for rehab exercises</p>
-          </div>
-          <div class="stat">
-            <strong>90%</strong>
-            <p>of patients show reduced anxiety after VR therapy</p>
-          </div>
-          <div class="stat">
-            <strong>95%</strong>
-            <p>of healthcare providers recommend VR as a complementary therapy</p>
-          </div>
-        </div>
       </section>
 
       <section class="testimonial">
@@ -97,5 +82,14 @@
     <p>© 2025 Virtual Voyages VR | Bringing Healing and Hope Through VR</p>
   </footer>
 
+  <script>
+    // Navigation toggle script for mobile hamburger menu
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
