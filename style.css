@@ -123,6 +123,13 @@ a {
   margin-bottom: 30px;
 }
 
+/* Hero Section Text */
+.hero-text h1,
+.hero-text p {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
 /* Buttons container in hero */
 .buttons-container {
   display: flex;
