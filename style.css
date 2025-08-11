@@ -230,11 +230,19 @@ footer {
 /* Make sure images don't stretch weirdly */
 .audience-card img {
   width: 100%;
-  height: auto;          /* Let image height adjust automatically */
-  aspect-ratio: 4 / 3;   /* Keeps consistent shape, taller than 16:9 */
-  object-fit: contain;   /* Show entire image without cropping */
+  height: auto;          /* Let the height adjust naturally */
+  max-height: 320px;     /* Limit max height to avoid giant images */
+  object-fit: contain;   /* Show the entire image without cropping */
+  object-position: top;  /* Keep faces visible near the top */
   border-radius: 10px 10px 0 0;
   margin-bottom: 15px;
+}
+
+/* Optional: slightly taller aspect ratio for larger screens */
+@media (min-width: 768px) {
+  .audience-card img {
+    max-height: 380px;
+  }
 }
 .services {
   display: flex;
