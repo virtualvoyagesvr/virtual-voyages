@@ -299,3 +299,15 @@ footer {
   }
 }
  
+.nav-icon {
+  height: 24px;       /* Adjust size as needed */
+  width: auto;
+  margin-right: 8px;  /* Space between icon and text */
+  vertical-align: middle;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
