@@ -204,3 +204,33 @@ footer {
     font-size: 2rem;
   }
 }
+/* Make both audience cards equal height and space content nicely */
+.audience-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.audience-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes button to bottom */
+}
+
+.audience-card p {
+  margin-bottom: 20px; /* space between paragraph and button */
+}
+
+/* Make sure images don't stretch weirdly */
+.audience-card img {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
