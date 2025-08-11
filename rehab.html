@@ -8,16 +8,39 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <a href="index.html" class="logo">Virtual Voyages VR</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="eldercare.html">Elder Care</a>
-      <a href="#contact" class="btn-primary">Contact Us</a>
-    </div>
-    <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
-  </nav>
+<!-- Navigation -->
+<nav class="main-nav">
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="Virtual Voyages VR Logo" class="logo-img">
+    Virtual Voyages VR
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="eldercare.html">Elder Care</a>
+    <a href="#contact" class="btn-primary">Contact Us</a>
+  </div>
+  <button class="nav-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+</nav>
+
+<style>
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .logo-img {
+    height: 40px; /* good size for desktop */
+    margin-right: 10px;
+  }
+  @media (max-width: 768px) {
+    .logo-img {
+      height: 32px; /* slightly smaller for mobile */
+    }
+  }
+</style>
+
 
   <!-- Hero Section -->
   <header class="hero" style="background-image: url('images/oculus.jpg');">
