@@ -298,16 +298,23 @@ footer {
     white-space: nowrap;   /* prevent wrapping */
   }
 }
- 
-.nav-icon {
-  height: 48px;       /* Adjust size as needed */
-  width: auto;
-  margin-right: 8px;  /* Space between icon and text */
-  vertical-align: middle;
-}
 .logo a {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: inherit;
 }
+
+.nav-icon {
+  height: 40px;      /* Desktop logo height */
+  width: auto;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-icon {
+    height: 32px;    /* Smaller logo on mobile */
+    margin-right: 8px;
+  }
+}
+
