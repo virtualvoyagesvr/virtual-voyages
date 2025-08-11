@@ -51,28 +51,78 @@
     </section>
 
     <!-- New Impact Stats Section -->
-    <section class="impact-stats">
-      <h2>Real Impact on Residents’ Lives</h2>
-      <div class="stats-grid">
-        <div class="stat">
-          <strong>85%</strong>
-          <p>Residents reported improved mood after VR sessions*</p>
-        </div>
-        <div class="stat">
-          <strong>75%</strong>
-          <p>Increase in social engagement observed</p>
-        </div>
-        <div class="stat">
-          <strong>60%</strong>
-          <p>Reduction in reported anxiety and agitation</p>
-        </div>
-        <div class="stat">
-          <strong>95%</strong>
-          <p>Staff say VR sessions positively impact residents’ wellbeing</p>
-        </div>
-      </div>
-      <p class="small-note">*Based on feedback from 500+ seniors across 20 elder care facilities.</p>
-    </section>
+<!-- New Impact Stats Section -->
+<section class="impact-stats">
+  <h2>Real Impact on Residents’ Lives</h2>
+  <div class="stats-grid">
+    <div class="stat">
+      <span class="percentage">85%</span>
+      <p>Residents reported improved mood after VR sessions*</p>
+    </div>
+    <div class="stat">
+      <span class="percentage">75%</span>
+      <p>Increase in social engagement observed</p>
+    </div>
+    <div class="stat">
+      <span class="percentage">60%</span>
+      <p>Reduction in reported anxiety and agitation</p>
+    </div>
+    <div class="stat">
+      <span class="percentage">95%</span>
+      <p>Staff say VR sessions positively impact residents’ wellbeing</p>
+    </div>
+  </div>
+  <p class="small-note">*Based on feedback from 500+ seniors across 20 elder care facilities.</p>
+</section>
+
+<style>
+  .impact-stats {
+    background: #f8fbff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  .impact-stats h2 {
+    color: #004d80;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  .stat {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  .percentage {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0077cc;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .stat p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .small-note {
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+    color: #666;
+  }
+</style>
+
 
     <!-- New Safety & Ease Section -->
     <section class="safety-ease">
