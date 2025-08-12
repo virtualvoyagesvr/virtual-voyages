@@ -325,3 +325,7 @@ footer {
 .logo:hover {
   color: #002244; /* Optional darker hover */
 }
+
+.main-nav .btn-primary {
+  color: white;
+}
