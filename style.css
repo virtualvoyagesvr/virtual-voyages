@@ -319,9 +319,9 @@ footer {
 }
 
 .logo {
-  color: #003366; /* Same deep blue from index.html */
-  text-decoration: none;
+  color: #1a4a8a; /* replace with the index.html blue */
 }
+
 .logo:hover {
   color: #002244; /* Optional darker hover */
 }
