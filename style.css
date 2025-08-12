@@ -306,14 +306,14 @@ footer {
 }
 
 .nav-icon {
-  height: 40px;      /* Desktop logo height */
+  height: 60px;      /* Desktop logo height */
   width: auto;
   margin-right: 10px;
 }
 
 @media (max-width: 768px) {
   .nav-icon {
-    height: 32px;    /* Smaller logo on mobile */
+    height: 48px;    /* Smaller logo on mobile */
     margin-right: 8px;
   }
 }
