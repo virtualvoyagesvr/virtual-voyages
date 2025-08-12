@@ -313,7 +313,7 @@ footer {
 
 @media (max-width: 768px) {
   .nav-icon {
-    height: 48px;    /* Smaller logo on mobile */
+    height: 60px;    /* Smaller logo on mobile */
     margin-right: 8px;
   }
 }
